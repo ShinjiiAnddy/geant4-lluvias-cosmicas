@@ -47,7 +47,7 @@ RUN echo "source /usr/local/bin/geant4make.sh" >> /etc/bash.bashrc
 # Copiar proyecto
 COPY geant4lab /geant4lab
 
-# 5. Limpiar cache antiguo, crear vis.mac por defecto y compilar el proyecto
+# 5. Limpiar cache antiguo, generar vis.mac completo con disparos de partículas y compilar el proyecto
 RUN mkdir -p /geant4lab/proyecto_lluvias_cosmicas/build && \
     rm -rf /geant4lab/proyecto_lluvias_cosmicas/build/* && \
     cat << 'EOF' > /geant4lab/proyecto_lluvias_cosmicas/build/vis.mac
@@ -59,6 +59,9 @@ RUN mkdir -p /geant4lab/proyecto_lluvias_cosmicas/build && \
 /vis/viewer/set/style wireframe
 /vis/scene/add/trajectories smooth
 /vis/scene/endOfEventAction accumulate
+/run/initialize
+/run/beamOn 1
+/vis/viewer/flush
 EOF
 
 RUN cd /geant4lab/proyecto_lluvias_cosmicas/build && \
