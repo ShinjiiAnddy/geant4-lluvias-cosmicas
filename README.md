@@ -29,7 +29,7 @@ Una vez dentro del contenedor, ejecute:
 
 ./sim
 
-📂 Estructura del Proyecto
+Estructura del Proyecto
 
 /geant4lab/proyecto_lluvias_cosmicas/
 ├── CMakeLists.txt
