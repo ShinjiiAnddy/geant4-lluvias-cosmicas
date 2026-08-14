@@ -2,13 +2,13 @@
 
 Este repositorio contiene el código fuente y el Dockerfile para construir y ejecutar una simulación de lluvias de partículas atmosféricas producidas por rayos cósmicos utilizando **Geant4 11.2.0**.
 
-## 🚀 Enlace a la Imagen de Docker Hub
+## Enlace a la Imagen de Docker Hub
 
 La imagen pública del proyecto está alojada en Docker Hub:
 
 docker pull shinjianddy/geant4-lluvias-cosmicas:latest
 
-💻 Instrucciones para Ejecutar la Imagen
+Instrucciones para Ejecutar la Imagen
 1. Permitir acceso al servidor gráfico en la máquina host:
 
 xhost +local:docker
