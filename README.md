@@ -6,16 +6,20 @@ Este repositorio contiene el código fuente y el Dockerfile para construir y eje
 
 La imagen pública del proyecto está alojada en Docker Hub:
 
-`` bash
+```bash
 docker pull shinjianddy/geant4-lluvias-cosmicas:latest
 ```
+
 Instrucciones para Ejecutar la Imagen
 1. Permitir acceso al servidor gráfico en la máquina host:
-
+   
+```bash
 xhost +local:docker
+```
 
 2. Descargar y ejecutar el contenedor:
 
+```bash
 docker run -it --rm \
   --net=host \
   --env="DISPLAY" \
@@ -23,12 +27,15 @@ docker run -it --rm \
   --device /dev/dri \
   -v $HOME/.Xauthority:/root/.Xauthority:rw \
   shinjianddy/geant4-lluvias-cosmicas:latest
+```
 
 3. Ejecutar la simulación:
 
 Una vez dentro del contenedor, ejecute:
 
+```bash
 ./sim
+```
 
 Estructura del Proyecto
 
