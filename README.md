@@ -8,7 +8,7 @@ La imagen pública del proyecto está alojada en Docker Hub:
 
 `` bash
 docker pull shinjianddy/geant4-lluvias-cosmicas:latest
-`
+```
 Instrucciones para Ejecutar la Imagen
 1. Permitir acceso al servidor gráfico en la máquina host:
 
